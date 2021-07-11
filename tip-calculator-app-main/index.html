@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <form id="main">
+    <h1>SPLI<br>TTER</h1>
+    <div id="container">
+      <div class="bill">
+        <div class="money">
+          <h3>Bill</h3>
+          <div>
+            <i class="fa fa-dollar icon"></i>
+            <input type="text" id="input-price">
+          </div>
+        </div>
+        <div class="tip">
+          <h3>Select Tip %</h3>
+          <br>
+          <div class="tip-select">
+            <div value="5">5%</div>
+            <div value="10">10%</div>
+            <div value="15">15%</div>
+            <div value="25">25%</div>
+            <div value="50">50%</div>
+
+            <div ><input id="custom-tip" type="text" placeholder="Custom"></div>
+          </div>
+        </div>
+        <div class="people">
+          <h3>Number of People</h3>
+          <span class="span-warning" style="color: red; font-size: 8px;">People Can't be Zero</span>
+          <div>
+            <i class="fa fa-user icon"></i>
+            <input type="text" id="num-of-people">
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="contaner">
+          <div class="tip-amount">
+            <div>
+              <h3>Tip Amount</h3>
+              <p>/ Person</p>
+            </div>
+            <p class="dollar" id="tip-total-amount">Rp. </p>
+          </div>
+          <div class="total">
+            <div>
+              <h3>Total</h3>
+              <p>/ Person</p>
+            </div>
+            <p class="dollar total-amount">Rp. </p>
+          </div>
+        </div>
+        <button onclick="Reset()">RESET</button>
+      </div>
+    </div>
+  </form>
+  <div class="attribution">
+    Coded and Practiced by Wallnuts
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
