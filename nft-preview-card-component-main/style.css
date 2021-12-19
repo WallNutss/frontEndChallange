@@ -1,0 +1,88 @@
+body{
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', Courier, monospace;
+    color: white;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    margin: auto auto;
+    display: flex;
+}
+
+.container .card{
+    width: 350px;
+    margin: auto;
+    padding: 5px 15px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+}
+.container .card .banner{
+    display: flex;
+    width: 350px;
+    margin: 10px auto;
+    border-radius: 15px;
+    align-items: center;
+}
+.card p {
+    color: hsl(215, 51%, 70%);
+}
+.separator{
+    width: auto;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+    margin: 15px 0 ;
+
+}
+.card div p{
+    color: white;
+    margin: 0;
+}
+.card div:nth-child(4){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card div .money{
+    color: hsl(178, 100%, 50%);
+}
+.card div .clock{
+    color: hsl(215, 51%, 70%);
+}
+.card div:nth-child(6){
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    gap: 10px;
+}
+
+.card div:nth-child(6) img{
+    width: 40px;
+}
+.attribution{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+      margin: 0 20px;
+    }
+    .container{
+      width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+    .container .card .banner{
+        display: flex;
+        width: 90%;
+        border-radius: 15px;
+        align-items: center;
+    }
+  }
