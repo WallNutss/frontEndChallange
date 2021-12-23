@@ -1,0 +1,188 @@
+:root {
+    /*Theme 1*/
+    --color:white;
+    --screen-background: hsl(224, 36%, 15%);
+    --background-color: hsl(222, 26%, 31%);
+	--text-color-EXbutton: hsl(0, 0, 100%);
+    --text-color:hsl(221, 14%, 31%);
+    --button-container-theme : hsl(223, 31%, 20%);
+	--button-color:hsl(30, 25%, 89%);
+    --button-color-shadow:hsl(28, 16%, 65%);
+    --resetdel-color:hsl(225, 21%, 49%);
+    --resetdel-color-shadow:hsl(224, 28%, 35%);
+    --result-color:hsl(6, 63%, 50%);
+    --result-color-shadow:hsl(6, 70%, 34%);
+}
+
+[theme="theme-2"] {
+    --color:hsl(60, 10%, 19%);
+    --background-color: hsl(0, 0%, 90%);
+    --screen-background: hsl(0, 0%, 93%);
+    --button-container-theme : hsl(0, 5%, 81%);
+    --text-color:hsl(60, 10%, 19%);
+	--text-color-EXbutton: hsl(0, 0, 100%);
+	--button-color:hsl(45, 7%, 89%);
+    --button-color-shadow:hsl(35, 11%, 61%);
+    --resetdel-color:hsl(185, 42%, 37%);
+    --resetdel-color-shadow:hsl(185, 58%, 25%);
+    --result-color:hsl(25, 98%, 40%);
+    --result-color-shadow:hsl(25, 99%, 27%);
+}
+
+body{
+    margin: 0 auto;
+    font-family:'Spartan',Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color:var(--color);
+}
+.join-container {
+    min-height: 100vh;
+    width: 27%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.display-container{
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px;
+}
+#current-operand{
+    font-weight: 100;
+    font-size: 24px;
+}
+.display{
+    background-color: var(--screen-background);
+    border-radius: 8px;
+    text-align: right;
+    margin: 5px;
+    padding: 8px;
+    height: 100px;
+}
+.calculation-component{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0.5em 0;
+    text-align: center;
+    background-color: var(--button-container-theme);
+    padding: 25px 20px;
+    border-radius: 8px;
+}
+
+.calculation-component button{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding:8px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 0px -1px var(--button-color-shadow);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculation-component :nth-child(17){
+    grid-column: 1/3;
+    grid-row: 5;
+}
+.calculation-component :nth-child(18){
+    grid-column: 3/5;
+    grid-row: 5;
+}
+.calculation-component .blue-key{
+    background-color: var(--resetdel-color);
+    box-shadow: 0px 3px 0px -1px var(--resetdel-color-shadow);
+    color: var(--text-color-EXbutton);
+}
+
+.calculation-component .red-key{
+    background-color: var(--result-color);
+    box-shadow: 0px 3px 0px -1px var(--result-color-shadow);
+    color: var(--text-color-EXbutton);
+}
+
+
+/*Slider Styling*/
+.brand-and-theme{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+.switch-theme-container{
+    display: flex;
+    align-items: center;
+}
+
+.theme-slider {
+	display: inline-block;
+	height: 34px;
+	position: relative;
+	width: 60px;
+}
+.theme-slider input {
+	display: none;
+}
+
+.slider {
+	background-color: #ccc;
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: .4s;
+}
+
+.slider:before {
+	background-color: #fff;
+	bottom: 4px;
+	content: "";
+	height: 26px;
+	left: 4px;
+	position: absolute;
+	transition: .4s;
+	width: 26px;
+}
+input:checked+.slider {
+	background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    .join-container {
+        min-height: 100vh;
+        width: 40%;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .join-container {
+        min-height: 100vh;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .join-container {
+        min-height: 100vh;
+        width: 90%;
+    }
+}
