@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <!-- fontAweosum -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="mobile-nav-menu hidden">
+    <ul>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+  <nav>
+    <div class="nav-menu nav-item">
+      <div class="menu-changer">
+        <button class="burger-menu hidden"><i class="fa fa-bars"></i></button>
+        <span><img src="./images/logo.svg" alt=""></span>
+      </div>
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="user-profile-cart nav-item">
+      <div class="attr-items hidden"></div>
+      <div>
+        <button id="cart-icon"><i class="fa fa-shopping-cart"></i></button>
+      <span><img src="./images/image-avatar.png" alt=""></span>
+      </div>
+    </div>
+  </nav>
+  <!-- Trigger/Open The Modal -->
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+  <!-- Modal content -->
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <section class="modal-carousel">
+        <div class="modal-carousel-container">
+          <div class="model-carousel-grid">
+              <button id="prev">&lt;</button>
+              <div class="card-container">
+                <div class="card view">
+                  <div class="card-img">
+                    <img class="modal-img-big-preview" src="./images/image-product-1.jpg" alt="">
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-img">
+                    <img class="modal-img-big-preview" src="./images/image-product-2.jpg" alt="">
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-img">
+                    <img class="modal-img-big-preview" src="./images/image-product-3.jpg" alt="">
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-img">
+                    <img class="modal-img-big-preview" src="./images/image-product-4.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <button id="next">&gt;</button>
+          </div>
+          <div class="modal-small-preview">
+            <ul>
+              <li><img class="modal-img-thumbnail active-thumbnail img-1-thumbnail" src="./images/image-product-1-thumbnail.jpg" alt=""></li>
+              <li><img class="modal-img-thumbnail img-2-thumbnail" src="./images/image-product-2-thumbnail.jpg" alt=""></li>
+              <li><img class="modal-img-thumbnail img-3-thumbnail" src="./images/image-product-3-thumbnail.jpg" alt=""></li>
+              <li><img class="modal-img-thumbnail img-4-thumbnail" src="./images/image-product-4-thumbnail.jpg" alt=""></li>
+  
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>
+
+  <div class="container">
+    <div class="cart-section hidden">
+      <div class="cart-title">
+        <p>Cart</p>
+      </div>
+      <div class="No-Checkout">
+        <p>Your Cart is Empty</p>
+      </div>
+      <div id="cart-container" class="cart-information">
+        <div class="cart-capsule hidden">
+          <div class="image-div">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div class="card-div">
+            <p>Fall Limited Edition Sneakers</p>
+            <p class="card-data-price"></p>
+          </div>
+          <button id="delete-button"><i class="fas fa-trash"></i></button>
+          <button class="checkout">Checkout</button>
+        </div>
+      </div>
+  
+    </div>
+    <div class="sections-container">
+      <section class="carousel carousel-product">
+        <div class="carousel-container">
+          <div class="big-preview active-preview">
+            <img class="img-big-preview" src="./images/image-product-1.jpg" alt="">
+          </div>
+          <div class="small-preview inactive-preview">
+            <ul>
+              <li><img class="img-thumbnail" src="./images/image-product-1-thumbnail.jpg" alt=""></li>
+              <li><img class="img-thumbnail" src="./images/image-product-2-thumbnail.jpg" alt=""></li>
+              <li><img class="img-thumbnail" src="./images/image-product-3-thumbnail.jpg" alt=""></li>
+              <li><img class="img-thumbnail" src="./images/image-product-4-thumbnail.jpg" alt=""></li>
+  
+            </ul>
+          </div>
+        </div>
+      </section>
+    
+      <section class="item-product">
+        <div class="item-container">
+          <div class="item-title">
+            <h3>SNEAKER COMPANY</h3>
+            <h1>Fall Limited Edition Sneakers</h1>
+          </div>
+          <div class="item-description">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </div>
+          <div class="item-price">
+            <p class="price-tag">$125.00</p>
+            <span>50%</span>
+          </div>
+          <div class="original-price">
+            $250.00
+          </div>
+          <div class="item-wanting">
+            <div class="buttons">
+              <div class="button-1">
+                <button id="minus-item"><i class="fa fa-minus"></i></button>
+                <input id="item-much" type="text" value="0" maxlength="2">
+                <button id="plus-item"><i class="fa fa-plus"></i></button>
+              </div>
+  
+              <div class="button-2">
+                <button class="add-cart"><span><i class="fa fa-shopping-cart"></i></span> Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Wallnuts</a>.
+  </div>
+  <script src="app.js"></script>
+  <script src="carousel.js"></script>
+</body>
+</html>
